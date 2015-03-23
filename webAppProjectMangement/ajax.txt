@@ -1,0 +1,58 @@
+$(function(){
+	var defaultOption = '<option value=""> ------- เลือก ------ </option>';
+	var loadingImage  = '<img src="images/loading4.gif" alt="loading" />';
+	// Bind an event handler to the "change" JavaScript event, or trigger that event on an element.
+	var row_plan = document.getElementById('row_plan');
+	var row_strategy = document.getElementById('row_strategy');
+	var row_aim = document.getElementById('row_aim');
+	alert('#plan_name'+row_plan.value);
+	$('#plan_name'+row_plan.value).change(function() {
+		alert('#plan_name'+row_plan.value);
+		$("#strategy_name"+row_strategy.value).html(defaultOption);
+		$("#aim_name"+row_aim.value).html(defaultOption);
+		// Perform an asynchronous HTTP (Ajax) request.	
+		$.ajax({
+			// A string containing the URL to which the request is sent.
+			url: "select_show.php",
+			// Data to be sent to the server.
+			data: ({ nextList : 'strategy', plan_id: $('#plan_name'+row_plan.value).val() }),
+			// The type of data that you're expecting back from the server.
+			dataType: "json",
+			// beforeSend is called before the request is sent
+			/*beforeSend: function() {
+				$("#waitAmphur").html(loadingImage);
+			},*/
+			// success is called if the request succeeds.
+			success: function(json){
+				//$("#waitAmphur").html("");
+				// Iterate over a jQuery object, executing a function for each matched element.
+				$.each(json, function(index, value) {
+					// Insert content, specified by the parameter, to the end of each element
+					// in the set of matched elements.
+					 $('#strategy_name'+row_strategy.value).append('<option value="' + value.strategy_id + 
+											'">' + value.Strategy_Description + '</option>');
+				});
+			}
+		});
+	});
+	
+	$('#strategy_name'+row_strategy.value).change(function() {
+		$("#strategy_name").html(defaultOption);
+		$.ajax({
+			url: "select_show.php",
+			data: ({ nextList : 'aim', strategy_id: $("#strategy_name"+row_strategy.value).val() }),
+			dataType: "json",
+			/*beforeSend: function() {
+				$("#waitTumbon").html(loadingImage);
+			},*/
+			success: function(json){
+				//$("#waitTumbon").html("");
+				$.each(json, function(index, value) {
+					 $("#aim_name"+row_strategy.value).append('<option value="' + value.aim_id + 
+											'">' + value.Aim_Description + '</option>');
+				});
+			}
+		});
+	});
+});
+

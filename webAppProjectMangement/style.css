@@ -1,0 +1,17 @@
+body{
+	background:#dddddd;
+	font-family:tahoma;
+	font-size:13px;
+}
+table{
+	font-family:tahoma;
+	font-size:13px;
+}
+fieldset{
+	border:0;
+}
+
+select{
+width:150px;
+text-align:center;
+}
