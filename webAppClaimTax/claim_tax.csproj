@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F52EF418-1662-49E8-9E95-988BEDFC530B}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>claim_tax</RootNamespace>
+    <AssemblyName>claim_tax</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="about.html" />
+    <Content Include="bin\claim_tax.dll" />
+    <Content Include="bin\claim_tax.pdb" />
+    <Content Include="blog.html" />
+    <Content Include="changepwd.aspx" />
+    <Content Include="classes.html" />
+    <Content Include="contact.html" />
+    <Content Include="css\ie7.css" />
+    <Content Include="css\ie8.css" />
+    <Content Include="css\ie9.css" />
+    <Content Include="css\style.css" />
+    <Content Include="EditTax.aspx" />
+    <Content Include="FAQ.aspx" />
+    <Content Include="images\bg-body.jpg" />
+    <Content Include="images\bg-body2.jpg" />
+    <Content Include="images\bg-body3.jpg" />
+    <Content Include="images\bg-body4.jpg" />
+    <Content Include="images\bg-footer.jpg" />
+    <Content Include="images\bg-gradient.png" />
+    <Content Include="images\bg-menu-selected.png" />
+    <Content Include="images\bg-send-hover.png" />
+    <Content Include="images\border-dashed.png" />
+    <Content Include="images\chess-kid.jpg" />
+    <Content Include="images\chess-kid2.jpg" />
+    <Content Include="images\chess.jpg" />
+    <Content Include="images\chess2.jpg" />
+    <Content Include="images\chessboard-and-phone.jpg" />
+    <Content Include="images\chessboard.jpg" />
+    <Content Include="images\chessboard2.jpg" />
+    <Content Include="images\chessboard3.jpg" />
+    <Content Include="images\chessboard4.jpg" />
+    <Content Include="images\icon-facebook.png" />
+    <Content Include="images\icon-googleplus.png" />
+    <Content Include="images\icon-home.png" />
+    <Content Include="images\icon-twitter.png" />
+    <Content Include="images\icon-youtube.png" />
+    <Content Include="images\icons.png" />
+    <Content Include="images\interface.png" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\pea-logo.jpg" />
+    <Content Include="images\pea-logomini.jpg" />
+    <Content Include="images\purple-bg.jpg" />
+    <Content Include="images\tax.png" />
+    <Content Include="index.html" />
+    <Content Include="login.aspx" />
+    <Content Include="logout.aspx" />
+    <Content Include="News.aspx" />
+    <Content Include="obj\Debug\claim_tax.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\claim_tax.dll" />
+    <Content Include="obj\Debug\claim_tax.pdb" />
+    <Content Include="tournaments.html" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="main.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="changepwd.aspx.cs">
+      <DependentUpon>changepwd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="changepwd.aspx.designer.cs">
+      <DependentUpon>changepwd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Db.cs">
+      <DependentUpon>Db.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Db.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Db.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="EditTax.aspx.cs">
+      <DependentUpon>EditTax.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditTax.aspx.designer.cs">
+      <DependentUpon>EditTax.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FAQ.aspx.cs">
+      <DependentUpon>FAQ.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FAQ.aspx.designer.cs">
+      <DependentUpon>FAQ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MD5_Encrypt.cs" />
+    <Compile Include="News.aspx.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="News.aspx.designer.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="main.aspx.cs">
+      <DependentUpon>main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="main.aspx.designer.cs">
+      <DependentUpon>main.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Db.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Db.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="familychessclub.psd" />
+    <Content Include="Site.Master" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="fonts\" />
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Db.dbml.layout">
+      <DependentUpon>Db.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2090</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

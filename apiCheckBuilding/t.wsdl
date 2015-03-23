@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<wsdl:definitions name="BuildingService"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+    xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/"
+    xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+    xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/"
+    xmlns:tns="http://example.org/BuildingService/"
+    xmlns:s="http://www.w3.org/2001/XMLSchema"
+    xmlns:http="http://schemas.xmlsoap.org/wsdl/http/"
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    targetNamespace="http://example.org/BuildingService/">
+
+<wsdl:types>
+	<s:schema elementFormDefault="qualified" targetNamespace="http://example.org/BuildingService/">
+		<s:element name="getBuildingData">
+			<s:complexType>
+				<s:sequence>
+					<s:element minOccurs="1" maxOccurs="1" name="DD" type="s:short"/>
+					<s:element minOccurs="1" maxOccurs="1" name="MM" type="s:short"/>
+					<s:element minOccurs="1" maxOccurs="1" name="YYYY" type="s:short"/>
+				</s:sequence>
+			</s:complexType>
+		</s:element>
+	
+		<s:element name="getBuildingDataResponse">
+			<s:complexType name="BuildingData">
+				<s:complexContent>
+					<s:restriction base="soapenc:Array">
+						<s:attribute ref="soapenc:arrayType" wsdl:arrayType="s:BuildingData[]"/>
+					</s:restriction>
+				</s:complexContent>
+			</s:complexType>
+		</s:element>
+		
+		<s:element name="CreateBuildingData">
+			<s:complexType>
+					<s:sequence>
+						<s:element name="BuildingDetail" type="s:string"/>
+						<s:element name="Checker" type="s:string"/>
+					</s:sequence>
+			</s:complexType>
+		</s:element>
+		
+		<s:element name="UpdateBuildingData">
+			<s:complexType>
+					<s:sequence>
+						<s:element name="BuildingDetail" type="s:string"/>
+						<s:element name="Checker" type="s:string"/>
+					</s:sequence>
+			</s:complexType>
+		</s:element>
+		
+		<s:element name="DeleteBuildingData">
+			<s:complexType>
+					<s:sequence>
+						<s:element name="BuildingDataID" type="s:string"/>
+					</s:sequence>
+			</s:complexType>
+		</s:element>
+		
+		<s:element name="BuildingDataResponse">
+			<s:complexType>
+					<s:sequence>
+						<s:element name="Result" type="s:string"/>
+					</s:sequence>
+			</s:complexType>
+		</s:element>
+	</s:schema>
+</wsdl:types>
+
+<wsdl:message name="getBuildingDataSoapIn">
+	<wsdl:part name="parameters" element="tns:getBuildingData"/>
+</wsdl:message>
+
+<wsdl:message name="getBuildingDataSoapOut">
+	<wsdl:part name="parameters" element="tns:getBuildingDataResponse"/>
+</wsdl:message>
+
+<wsdl:message name="CreateBuildingDataSoapIn">
+	<wsdl:part name="parameters" element="tns:CreateBuildingData"/>
+</wsdl:message>
+
+<wsdl:message name="CreateBuildingDataSoapOut">
+	<wsdl:part name="parameters" element="tns:BuildingDataResponse"/>
+</wsdl:message>
+
+<wsdl:message name="UpdateBuildingDataSoapIn">
+	<wsdl:part name="parameters" element="tns:UpdateBuildingData"/>
+</wsdl:message>
+
+<wsdl:message name="UpdateBuildingDataSoapOut">
+	<wsdl:part name="parameters" element="tns:BuildingDataResponse"/>
+</wsdl:message>
+
+<wsdl:message name="DeleteBuildingDataSoapIn">
+	<wsdl:part name="parameters" element="tns:DeleteBuildingData"/>
+</wsdl:message>
+
+<wsdl:message name="DeleteBuildingDataSoapOut">
+	<wsdl:part name="parameters" element="tns:BuildingDataResponse"/>
+</wsdl:message>
+
+<wsdl:portType name="InfoSoap">
+	<wsdl:operation name="getBuildingData">
+		<wsdl:input message="tns:getBuildingDataSoapIn"/>
+		<wsdl:output message="tns:getBuildingDataSoapOut"/>
+	</wsdl:operation>
+	
+	<wsdl:operation name="CreateBuildingData">
+		<wsdl:input message="tns:CreateBuildingDataSoapIn"/>
+		<wsdl:output message="tns:CreateBuildingDataSoapOut"/>
+	</wsdl:operation>
+	
+	<wsdl:operation name="UpdateBuildingData">
+		<wsdl:input message="tns:UpdateBuildingDataSoapIn"/>
+		<wsdl:output message="tns:UpdateBuildingDataSoapOut"/>
+	</wsdl:operation>
+	
+	<wsdl:operation name="DeleteBuildingData">
+		<wsdl:input message="tns:DeleteBuildingDataSoapIn"/>
+		<wsdl:output message="tns:DeleteBuildingDataSoapOut"/>
+	</wsdl:operation>
+</wsdl:portType>
+
+<wsdl:binding name="InfoSoap" type="tns:InfoSoap">
+	<soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+	<wsdl:operation name="getBuildingData">
+		<soap:operation soapAction="http://localhost/Ser/getBuildingData" style="document"/>
+		<wsdl:input>
+			<soap:body use="literal"/>
+		</wsdl:input>
+				
+		<wsdl:output>
+			<soap:body use="literal"/>
+		</wsdl:output>
+	</wsdl:operation>
+	
+	<wsdl:operation name="CreateBuildingData">
+		<soap:operation soapAction="http://localhost/Ser/CreateBuildingData" style="document"/>
+		<wsdl:input>
+			<soap:body use="literal"/>
+		</wsdl:input>
+				
+		<wsdl:output>
+			<soap:body use="literal"/>
+		</wsdl:output>
+	</wsdl:operation>
+	
+	<wsdl:operation name="UpdateBuildingData">
+		<soap:operation soapAction="http://localhost/Ser/UpdateBuildingData" style="document"/>
+		<wsdl:input>
+			<soap:body use="literal"/>
+		</wsdl:input>
+				
+		<wsdl:output>
+			<soap:body use="literal"/>
+		</wsdl:output>
+	</wsdl:operation>
+	
+	<wsdl:operation name="DeleteBuildingData">
+		<soap:operation soapAction="http://localhost/Ser/DeleteBuildingData" style="document"/>
+		<wsdl:input>
+			<soap:body use="literal"/>
+		</wsdl:input>
+				
+		<wsdl:output>
+			<soap:body use="literal"/>
+		</wsdl:output>
+	</wsdl:operation>
+</wsdl:binding>
+
+<wsdl:service name="Info">
+	<wsdl:port name="InfoSoap" binding="tns:InfoSoap">
+		<soap:address location="http://localhost/Ser/s.php"/>
+	</wsdl:port>
+</wsdl:service>
+
+</wsdl:definitions>

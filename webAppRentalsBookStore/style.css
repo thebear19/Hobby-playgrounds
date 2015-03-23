@@ -1,0 +1,213 @@
+#container {
+width: 1028px;
+height: 370px;
+}
+#header {
+width: 1028px;
+height: 151px;
+font-family: Cursive;
+font-color: #006;
+}
+#horizontalnav{
+width: 1028px;
+height: 60px;
+position: relative;
+background-color: #92561f;
+-moz-border-radius: 8px;
+-webkit-border-radius: 8px;
+border-radius: 8px;
+}
+#body {
+width: auto;
+height: auto !important;
+min-height: 100%;
+background-image: url(images/BG2.jpg);
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+border-radius: 10px;
+}
+#footer{
+clear: both;
+background-color: #000000;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+}
+#header a{
+color: #ffffff;
+text-decoration: underline;
+font-weight: bold;
+font-family: Verdana;
+font-size: 14px;
+}
+#header a:visited {
+color: #000000;
+text-decoration: underline;
+font-weight: bold;
+}
+#header a:hover {
+color: #cc0000;
+text-decoration: none;
+font-weight: bold;
+}
+
+/* CSS3 TRANSITION ONLY EFFECT */
+#paneltwo { 
+	width:300px;
+	list-style:none; 
+	position:relative;
+	display:inline;
+}
+
+#paneltwo li {  
+	border-radius:3px 3px 3px 3px; 
+	margin-top:5px;
+	width:150px;
+	float:left;
+	overflow:hidden;
+	position:relative;
+	font-family: Verdana;
+	background: #ffb137;
+	/*background: -moz-linear-gradient(top, #161616 0%, #ffb137 100%);
+	background: -webkit-linear-gradient(top, #161616 0%,#ffb137 100%);
+	background: -o-linear-gradient(top, #161616 0%,#ffb137 100%);*/
+	border:1px solid #aa6e0f;
+}
+
+#paneltwo li.mask { /* It allows us to hide the link behind it */
+	z-index:10; 
+	overflow:hidden;
+}
+
+#paneltwo li a { 
+	color:#fff; 
+	font-family: Verdana;
+	display:block; 
+	padding:10px;
+}
+
+#paneltwo li a:hover { 
+	color:#00c6ff;
+}
+
+#paneltwo li.linkOne, 
+#paneltwo li.linkTwo, 
+#paneltwo li.linkThree, 
+#paneltwo li.linkFour, 
+#paneltwo li.linkFive {   
+        -moz-transition: all 1s ease-in-out;
+	-webkit-transition: all 1s ease-in-out;
+	-o-transition: all 1s ease-in-out;
+}
+
+#paneltwo:hover li.linkOne, 
+#paneltwo:hover li.linkTwo, 
+#paneltwo:hover li.linkThree, 
+#paneltwo:hover li.linkFour, 
+#paneltwo:hover li.linkFive { 	
+        -moz-transform:translateX(0px);
+	-moz-transition: all 1s ease-in-out; 
+	-webkit-transform:translateX(0px);
+	-webkit-transition: all 1s ease-in-out; 
+	-o-transform:translateX(0px);
+	-o-transition: all 1s ease-in-out; 
+}
+
+#paneltwo li.linkOne {
+	-moz-transform:translateX(-90%); 
+	-moz-transition-delay:0.6s; 
+	
+	-webkit-transform:translateX(-90%); 
+	-webkit-transition-delay:0.6s; 
+	
+	-o-transform:translateX(-90%); 
+	-o-transition-delay:0.6s; 
+	
+	z-index:5; 
+}
+
+#paneltwo li.linkTwo { 
+	-moz-transform:translateX(-180%); 
+	-moz-transition-delay:0.5s; 
+	
+	-webkit-transform:translateX(-180%); 
+	-webkit-transition-delay:0.5s; 
+	
+	-o-transform:translateX(-180%); 
+	-o-transition-delay:0.5s; 
+	
+	z-index:4;
+}
+
+#paneltwo li.linkThree { 
+	-moz-transform:translateX(-270%); 
+	-moz-transition-delay:0.4s; 
+	
+	-webkit-transform:translateX(-270%); 
+	-webkit-transition-delay:0.4s; 
+	
+	-o-transform:translateX(-270%); 
+	-o-transition-delay:0.4s;
+	
+	z-index:3;
+}
+
+#paneltwo li.linkFour { 
+	-moz-transform:translateX(-360%); 
+	-moz-transition-delay:0.3s;
+	
+	-webkit-transform:translateX(-360%); 
+	-webkit-transition-delay:0.3s;
+	
+	-o-transform:translateX(-360%); 
+	-o-transition-delay:0.3s; 
+	z-index:2;
+}
+
+#paneltwo li.linkFive { 
+	-moz-transform:translateX(-450%); 
+	-moz-transition-delay:0.2s;
+	
+	-webkit-transform:translateX(-450%); 
+	-webkit-transition-delay:0.2s;
+	
+	-o-transform:translateX(-450%); 
+	-o-transition-delay:0.2s;
+	 
+	z-index:1;
+}
+
+#paneltwo:hover li.linkOne { 
+	-moz-transition-delay:0s; 
+	-webkit-transition-delay:0s; 
+	-o-transition-delay:0s; 
+	z-index:5;
+}
+
+#paneltwo:hover li.linkTwo { 
+	-moz-transition-delay:0.2s;
+	-webkit-transition-delay:0.2s;
+	-o-transition-delay:0.2s; 
+	z-index:4;
+}
+
+#paneltwo:hover li.linkThree { 
+	-moz-transition-delay:0.4s;
+	-webkit-transition-delay:0.4s;
+	-o-transition-delay:0.4s; 
+	z-index:3;
+}
+
+#paneltwo:hover li.linkFour { 
+	-moz-transition-delay:0.6s;
+	-webkit-transition-delay:0.6s;
+	-o-transition-delay:0.6s; 
+	z-index:2;
+}
+
+#paneltwo:hover li.linkFive { 
+	-moz-transition-delay:0.8s;
+	-webkit-transition-delay:0.8s;
+	-o-transition-delay:0.8s; 
+	z-index:1;
+}
