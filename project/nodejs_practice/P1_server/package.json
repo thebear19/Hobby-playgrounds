@@ -1,0 +1,11 @@
+{
+  "name": "P1_server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "express-generator": "^4.15.0"
+  }
+}
