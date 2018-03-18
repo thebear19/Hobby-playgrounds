@@ -74,7 +74,7 @@ class  CliffWalking:
         return self.mapper[ self.hight-1, 0 ]
 
     def render(self):
-        print self.env
+        print (self.env)
 
 
 if __name__ == "__main__":
@@ -109,7 +109,7 @@ if __name__ == "__main__":
                 #agent.reduceExploration(i)
                 break
 
-    print agent.Q
+    print (agent.Q)
 
     '''#show graph
     x = np.arange(0, num_episodes, 1)
