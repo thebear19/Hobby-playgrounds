@@ -32,7 +32,7 @@ class  CliffWalking:
 
         self.current_position = [ self.hight-1, 0 ]
 
-        self.env = np.array(range(self.observation_space), dtype='a16').reshape(self.hight, self.width)
+        self.env = np.array(range(self.observation_space), dtype='U16').reshape(self.hight, self.width)
         self.mapper = np.array(range(self.observation_space)).reshape(self.hight, self.width)
         self.env[ :, : ] = " "
         self.env[ self.hight-1, 1:self.width-1 ] = "X"
